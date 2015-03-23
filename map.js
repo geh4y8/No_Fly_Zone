@@ -34,6 +34,7 @@ function initial_location(lat, lng, airports){
   });
 
   var map = L.map('map').addLayer(mapboxTiles).setView([lat, lng], 10);
+
   if(airports){
     var ports = airports.getElementsByTagName("geoname");
     console.log(ports);
@@ -50,12 +51,17 @@ function initial_location(lat, lng, airports){
 
     }
 
-      swal({
-        title: 'no fly zone',
-        text: 'You cannot fly here, ' + ports[0].children[1].innerHTML + ' is within a five mile radius!',
-        type: 'warning'
-      });
+    //alerts the user that they are in no fly zone
+    swal({
+      title: 'no fly zone',
+      text: 'You cannot fly here, ' + ports[0].children[1].innerHTML + ' is within a five mile radius!',
+      type: 'warning'
+    });
 
+  } else {
+    swal({
+      title: 'Good to go!'
+    })
   }
 
 }
