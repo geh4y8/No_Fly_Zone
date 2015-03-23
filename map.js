@@ -17,7 +17,6 @@ function check_for_airports(lat, lng){
     if(response){
       airports = true;
       initial_location(lat, lng, response);
-      console.log('airports found')
     } else{
       initial_location(lat, lng);
     }
@@ -37,7 +36,6 @@ function initial_location(lat, lng, airports){
 
   if(airports){
     var ports = airports.getElementsByTagName("geoname");
-    console.log(ports);
     for (var i = 0; i<ports.length; i++){
       var port = ports[i];
       var portLat = port.children[2].innerHTML;
