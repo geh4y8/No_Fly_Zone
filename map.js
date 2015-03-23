@@ -58,21 +58,4 @@ function initial_location(lat, lng, airports){
 
   }
 
-
-
-
-
-  // function create_airport_marker(airportlat, airportlng){
-  //   var marker = L.marker([airportlat, airportlng]).addTo(map);
-  // }
 }
-
-// function create_airport_marker(lat, lng){
-//   var marker = L.marker([lat, lng]).addTo(map);
-
-//   var circle = L.circle([51.508, -0.11], 500, {
-//       color: 'red',
-//       fillColor: '#f03',
-//       fillOpacity: 0.5
-//   }).addTo(map);
-// }
